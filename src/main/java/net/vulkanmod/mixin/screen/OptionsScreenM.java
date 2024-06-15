@@ -1,6 +1,7 @@
 package net.vulkanmod.mixin.screen;
 
 import net.minecraft.client.Options;
+import net.minecraft.client.option.GameOptions;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.vulkanmod.config.gui.VOptionScreen;
@@ -11,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(OptionsScreen.class)
+@Mixin(GameOptions.class)
 public class OptionsScreenM extends Screen {
 
     @Shadow @Final private Screen lastScreen;
